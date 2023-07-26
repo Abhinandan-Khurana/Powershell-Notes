@@ -20,12 +20,12 @@ A cmdlet always consists of a verb, e.g.,
 Example - 
 
 - **Get-Process** - Shows the processes currently running on your computer.
-![[Get-Process.png]]
+![[../assets/Get-Process.png]]
 - **Get-Service** - Shows the list of services with their status
 - **Get-Content** — Shows the content of the file you specify (for example, Get-Content C:\Windows\System32\drivers\etc\hosts)
 
 **Fun Fact!** -
-You don't need to memorize all cmdlets. You can list all cmdlets by executing the **Get-Help -Category cmdlet**, which will return the following -![[Get-Help.png]]
+You don't need to memorize all cmdlets. You can list all cmdlets by executing the **Get-Help -Category cmdlet**, which will return the following -![[../assets/Get-Help.png]]
 
 **NOTE:** You can also create your own custom cmdlets.
 
@@ -37,7 +37,7 @@ If you forget a cmdlet's parameters, just use a script like the following, which
 Get-Process | Get-Member
 ```
  
-![[Get-Member.png]]
+![[../assets/Get-Member.png]]
 
 If you still don't find the cmdlet you need, you can make sure the help is current and then get examples for a cmdlet (such as Get-Process) using a script like this:
 
