@@ -25,7 +25,7 @@ Example -
 - **Get-Content** — Shows the content of the file you specify (for example, Get-Content C:\Windows\System32\drivers\etc\hosts)
 
 **Fun Fact!** -
-You don't need to memorize all cmdlets. You can list all cmdlets by executing the **Get-Help -Category cmdlet**, which will return the following -![Get-Help](../assets/Get-Help.png)
+You don't need to memorize all cmdlets. You can list all cmdlets by executing the **Get-Help -Category cmdlet**, which will return the following - ![Get-Help](../assets/Get-Help.png)
 
 **NOTE:** You can also create your own custom cmdlets.
 
