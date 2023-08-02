@@ -101,3 +101,28 @@ Get-ADUser -Filter * -Properties Name, PasswordNeverExpires | where {$_.password
 ```powershell
 Search-ADAccount -LockedOut
 ```
+
+16. Unlock User Account
+
+```powershell
+Search-ADAccount -LockedOut
+```
+
+17. List all Disabled User Accounts
+
+```powershell
+Search-ADAccount -AccountDisabled
+```
+
+18. Force Password Change at Next Login
+
+```powershell
+Set-ADUser -Identity Username -ChangePasswordAtLogon $true
+```
+
+19. Move a Single User to a New OU
+
+```powershell
+Move-ADObject -Identity "CN=Test-User (0001),OU=MYADC Users,DC=ad,DC=example,DC=com" -TargetPath "OU=HR,OU=MYADC Users,DC=ad,DC=EXAMPLE,DC=com"
+```
+
