@@ -11,7 +11,7 @@
 
 ---
 
-### Active_Directory_Commands
+### Active_Directory_Commands -
 
 1. View all Active Directory commands
 
@@ -45,7 +45,7 @@ Get-ADDefaultDomainPasswordPolicy
 
 <hr>
 
-#### AD User Commands
+#### AD User Commands -
 
 6. Get User and List All Properties (attributes)
 
@@ -133,7 +133,7 @@ Move-ADObject -Identity "CN=Test-User (0001),OU=MYADC Users,DC=ad,DC=example,DC=
 
 <hr>
 
-#### AD Group Commands
+#### AD Group Commands -
 
 20. Get All members Of A Security Group
 
@@ -167,7 +167,7 @@ Get-ADGroup -Filter * | Where-Object [$_.name -Like "*GROUP_NAME*"]
 
 <hr>
 
-#### AD Computer Commands
+#### AD Computer Commands -
 
 25. Get All Computers
 
@@ -225,4 +225,4 @@ Get-ADComputer -SearchBase "OU=DN" -Filter * | Remote-ADComputer
 
 <hr>
 
-#### Group Policy Commands
+#### Group Policy Commands -
