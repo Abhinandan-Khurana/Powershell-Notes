@@ -174,3 +174,55 @@ Get-ADGroup -Filter * | Where-Object [$_.name -Like "*GROUP_NAME*"]
 ```powershell
 Get-ADComputer -Filter *
 ```
+
+26. Get All Computers by Name
+
+```powershell
+Get-ADComputer -Filter * | Select name
+```
+
+27. Get All Computers from an OU
+
+```powershell
+Get-ADComputer -SearchBase "OU=DN" -Filter *
+```
+
+28. Get a Count of all Computers in Doamin
+
+```powershell
+Get-ADComputer -Filter * | Measure
+```
+
+29. Get all Win 10 Computers
+
+```powershell
+Get-AdComputer -Filter {OperatingSystem -Like "*Windows 10*"} -Property * | Select name,operatingsystem
+```
+
+30. Get a Count of All computers by Operating System
+
+```powershell
+Get-ADComputer -Filter "Name -like '*'" -Properties OperatingSystem | Group -Property OperatingSystem | Select Name,Count
+```
+
+31. Delete a single Computer
+
+```powershell
+Remove-ADComputer -Identify "USER04-SRV-01"
+```
+
+32. Delete a list of Computer Accounts
+
+```powershell
+Get-Content -Path C:\ComputerList.txt | Remove-ADComputer
+```
+
+33. Delete Computers From an OU
+
+```powershell
+Get-ADComputer -SearchBase "OU=DN" -Filter * | Remote-ADComputer
+```
+
+<hr>
+
+#### Group Policy Commands
