@@ -1,5 +1,7 @@
 # Active Directory PowerShell Commands
 
+---
+
 ## Table of Contents -
 
 - [Active Directory Commands](#Active_Directory_Commands)
@@ -7,6 +9,7 @@
 - [Basic Powershell Commands](#Basic_Powershell_Commands)
 - [Misc](#Misc)
 
+---
 
 ### Active_Directory_Commands
 
@@ -39,6 +42,8 @@ Get-ADFineGrainedPasswordPolicy -filter *
 ```powerhell
 Get-ADDefaultDomainPasswordPolicy
 ```
+
+<hr>
 
 #### AD User Commands
 
@@ -126,6 +131,8 @@ Set-ADUser -Identity Username -ChangePasswordAtLogon $true
 Move-ADObject -Identity "CN=Test-User (0001),OU=MYADC Users,DC=ad,DC=example,DC=com" -TargetPath "OU=HR,OU=MYADC Users,DC=ad,DC=EXAMPLE,DC=com"
 ```
 
+<hr>
+
 #### AD Group Commands
 
 20. Get All members Of A Security Group
@@ -157,6 +164,8 @@ Get-ADGroupMember -Identity “GROUP_NAME” | Select name | Export-csv -path C:
 ```powershell
 Get-ADGroup -Filter * | Where-Object [$_.name -Like "*GROUP_NAME*"]
 ```
+
+<hr>
 
 #### AD Computer Commands
 
