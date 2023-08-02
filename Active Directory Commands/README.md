@@ -2,13 +2,13 @@
 
 ## Table of Contents -
 
-- [Active Directory Commands](#"Active Directory Commands")
-- [Windows Server & Client Commands](#"Windows Server & Client Commands")
-- [Basic Powershell Commands](#"Basic Powershell Commands")
+- [Active Directory Commands](#Active_Directory_Commands)
+- [Windows Server & Client Commands](#Windows_Server_&_Client_Commands)
+- [Basic Powershell Commands](#Basic_Powershell_Commands)
 - [Misc](#Misc)
 
 
-### Active Directory Commands
+### Active_Directory_Commands
 
 1. View all Active Directory commands
 
