@@ -126,3 +126,42 @@ Set-ADUser -Identity Username -ChangePasswordAtLogon $true
 Move-ADObject -Identity "CN=Test-User (0001),OU=MYADC Users,DC=ad,DC=example,DC=com" -TargetPath "OU=HR,OU=MYADC Users,DC=ad,DC=EXAMPLE,DC=com"
 ```
 
+#### AD Group Commands
+
+20. Get All members Of A Security Group
+
+```powershell
+Get-ADGroupMember -identity “HR Full”
+```
+
+21. Get All Security Groups [NOTE: This will list all security groups in a domain]
+
+```powershell
+Get-ADGroup -Filter *
+```
+
+22. Add User to Group [NOTE: Change GROUP_NAME to the AD group you want to add users to.]
+
+```powershell
+ADD-ADGroupMember -Indentify GROUP_NAME -Members USER1,USER2
+```
+
+23. Export Users From a Group [NOTE: This will export group members to a CSV, change GROUP_NAME to the group you want to export.]
+
+```powershell
+Get-ADGroupMember -Identity “GROUP_NAME” | Select name | Export-csv -path C:\OutputGroupmembers.csv -NoTypeInformation
+```
+
+24. Get Group by keyword [NOTE: Find a group by keyword. Helpful if you are not sure of the name, change GROUP_NAME.]
+
+```powershell
+Get-ADGroup -Filter * | Where-Object [$_.name -Like "*GROUP_NAME*"]
+```
+
+#### AD Computer Commands
+
+25. Get All Computers
+
+```powershell
+Get-ADComputer -Filter *
+```
