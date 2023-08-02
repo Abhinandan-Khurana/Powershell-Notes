@@ -2,9 +2,9 @@
 
 ## Table of Contents -
 
-- [Active Directory Commands](#Active Directory Commands)
-- [Windows Server & Client Commands](#Windows Server & Client Commands)
-- [Basic Powershell Commands](#Basic Powershell Commands)
+- [Active Directory Commands](#"Active Directory Commands")
+- [Windows Server & Client Commands](#"Windows Server & Client Commands")
+- [Basic Powershell Commands](#"Basic Powershell Commands")
 - [Misc](#Misc)
 
 
