@@ -226,3 +226,25 @@ Get-ADComputer -SearchBase "OU=DN" -Filter * | Remote-ADComputer
 <hr>
 
 #### Group Policy Commands -
+
+34. Get all GPO related commands
+
+```powershell
+Get-Command -Module GroupPolicy
+```
+
+35. Get all GPOs in the Domain
+
+```powershell
+Get-GPO -All | Select DisplayName,gpostatus
+```
+
+36. Backup all GPOs in the Domain
+
+```powershell
+Backup-GPO -All -Path E:\GPObackup
+```
+
+<hr>
+
+
