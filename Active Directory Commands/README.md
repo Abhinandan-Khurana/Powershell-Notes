@@ -247,4 +247,64 @@ Backup-GPO -All -Path E:\GPObackup
 
 <hr>
 
+### Windows_Server_&_Client_Commands -
+
+1. Get all Services
+
+```powershell
+Get-Service
+```
+
+2. Get all processes
+
+```powershell
+Get-Process
+```
+
+3. Display Network Adapters [NOTE: Gets detailed about the network adapter installed such as name,  status, speed and mac address.]
+
+```powershell
+Get-NetAdapter
+```
+
+4. Restart Remote Computers
+
+```powershell
+Restart-Computer -ComputerName "Sever01","Server02","localhost"
+```
+
+5. Get Last Boot time 
+
+```powershell
+$os = Get-WmiObject win32_operatingsystem $uptime = (Get-Date) - 
+$os.ConvertToDateTime($os.LastBootUpTime) Write-Output ("Last boot: " + 
+$os.ConvertToDateTime($os.LastBootUpTime))
+```
+
+You can also run this single line to get last boot time -
+
+```powershell
+systeminfo | more
+```
+
+6. Start a Remote Session [IMPORTANT]
+
+```powershell
+Enter-PSSession -ComputerName
+```
+
+7. Read the content of a file (Open a file) [NOTE: This example shows how to read the content of the windows firewall log file]
+
+```powershell
+Get-Content -Path "C:\WindowsSystem32logfilesfirewallpfirewall.log"
+```
+
+8. Copy and Paste Folders [NOTE: Use this command to copy an entire folder to another folder. This will copy the folder and all the sub folder/files. The -verbose command will display the results to the console.]
+
+```powershell
+Copy-Item E:\WindowsImageBackup\Exchange -Destination \\Server1\Backups\Exchange -Recursive -Verbose
+```
+
+<hr>
+
 
