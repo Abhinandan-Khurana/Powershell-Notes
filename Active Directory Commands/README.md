@@ -307,4 +307,102 @@ Copy-Item E:\WindowsImageBackup\Exchange -Destination \\Server1\Backups\Exchange
 
 <hr>
 
+### Basic_Powershell_Commands -
 
+1. Get Execution Policy
+
+```powershell
+Get-ExecutionPolicy
+```
+
+2. Set Execution Policy to Unristricted
+
+```powershell
+Set-ExecutionPolicy Unrestricted
+```
+
+3. Show Powershell Version
+
+```powershell
+$PSVersionTable
+```
+
+4. Get help for a Command
+
+```powershell
+Get-Help COMMAND_NAME
+```
+
+5. Search Get-Help [NOTE: Use this to search the help files. This is useful if you don’t know the command or want to see if one exists.]
+
+```powershell
+Get-Help *keyword*
+```
+
+6. Get Installed Modules
+
+```powershell
+Get-InstalledModules
+```
+
+7. List all available Moules
+
+```powershell
+Get-Module -ListAvailable
+```
+
+8. Export Results to CSV
+
+```powershell
+Get-ADUSer Username -Properties * | Select name,department,title | Export-CSV C:\user.csv
+```
+
+9. Display available commands
+
+```powershell
+Get-Command
+```
+
+10. Find new Module
+
+```powershell
+Find-Module *ntfs*
+```
+
+11. Install new Module [NOTE: Installs modules from https://www.powershellgallery.com/ , I found a module called NTFSSecurity, to install it I run this command]
+
+```powershell
+Install-Module NTFSSecurity
+```
+
+---
+
+
+### Misc -
+
+1. Get A List of All Office 365 Users
+
+```powershell
+Get-MsolUser | Select DisplayName,City,Department,ObjectID
+```
+
+2. Get Full mailbox details
+
+```powershell
+Get-Mailbox email-address | fl
+```
+
+3. Get Calendar Permissions
+
+```powershell
+Get-MailboxFolderPermission username:calendar
+```
+
+4. Enable Remote Mailbox (Hybrid Environment)
+Use this command if you have an existing on-premise user that needs an office 365 mailbox. There are other ways to do this but this creates all the attributes in the AD account.
+
+NOTE: Replace the username and the tenant fields
+
+```powershell
+Enable-RemoteMailbox username -RemoteRoutingAddress "username@tenant.mail.onmicrosoft.com"
+```
